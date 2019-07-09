@@ -17,7 +17,8 @@ describe('Way Farer API Tests', () => {
         })
         .expect('Content-Type', /json/, done);
     });
-    it('response status code should be 201', (done) => {
+    it('response status code should be 201', function setTime(done) {
+      this.timeout(10000);
       request(app)
         .post('/api/v1/auth/signup')
         .send({
