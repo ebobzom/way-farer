@@ -3,8 +3,8 @@ const { expect: chaiExpect } = require('chai');
 const app = require('../server');
 
 describe('POST /api/v1/auth/signin', () => {
-  before(function setTime(done) {
-    this.timeout(10000);
+  this.timeout(10000);
+  before((done) => {
     request(app)
       .post('/api/v1/auth/signup')
       .send({
