@@ -63,7 +63,7 @@ const createUser = (req, res) => {
       }
     })
     .catch((e) => {
-      throw new Error('An error ocurred', e);
+      res.send(e);
     });
 };
 

@@ -4,7 +4,8 @@ const app = require('../server');
 
 describe('Way Farer API Tests', () => {
   describe('POST /api/v1/auth/signup', () => {
-    it('response should be a JSON', () => {
+    it('response should be a JSON', function setTime() {
+      this.timeout(10000);
       request(app)
         .post('/api/v1/auth/signup')
         .send({
@@ -14,7 +15,7 @@ describe('Way Farer API Tests', () => {
           password: '123',
           is_admin: true,
         })
-        .expect('Content-Type', /json/);
+        .expect('Content-Type', /json/, done);
     });
     it('response status code should be 201', (done) => {
       request(app)
