@@ -2,7 +2,7 @@ const request = require('supertest');
 const { expect: chaiExpect } = require('chai');
 const app = require('../server');
 
-describe('POST /api/v1/auth/signin', () => {
+describe('POST /api/v1/auth/signin', function setTime() {
   this.timeout(10000);
   before((done) => {
     request(app)
