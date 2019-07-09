@@ -4,7 +4,7 @@ const app = require('../server');
 
 describe('Way Farer API Tests', () => {
   describe('POST /api/v1/auth/signup', () => {
-    it('response should be a JSON', function setTime() {
+    it('response should be a JSON', function setTime(done) {
       this.timeout(10000);
       request(app)
         .post('/api/v1/auth/signup')
