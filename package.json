@@ -7,7 +7,7 @@
   "author": "Elijah Bobzom <ebobzom@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "nyc ./node_modules/.bin/mocha --exit",
+    "test": "./node_modules/.bin/mocha --exit",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "eslint": "./node_modules/.bin/eslint"
   },
