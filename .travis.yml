@@ -12,5 +12,4 @@ services:
   - postgresql
 
 before_script:
-  - psql -c 'drop database test1;' -U postgres
   - psql -c 'create database test1;' -U postgres
